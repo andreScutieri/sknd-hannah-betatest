@@ -99,7 +99,7 @@ Finalmente vamos poder começar a trabalhar! Mas antes vamos dar uma espiada no 
 
 Existem 3 rotas (routes) nesta versão super-simplificada do sistema. A primeira é a home (ou index), a própria página inicial. Quando você abrir o sistema no navegador, verá essa rota:
 
-[]
+<img src="http://imgur.com/AETjIIv" alt="Home Page">
 
 A segunda rota é a mesma página `/`, mas ao invés de ter seu método como GET, ela possui o método POST. Isso significa que essa rota é a usada para receber os dados do formulário de cadastro. Você não conseguirá acessar essa rota pelo método POST pelo navegador a não ser que clique no botão "Cadastrar" no formulário. A viagem até ela é tão rápida que você nem verá a página, pois o cadastro te levará para a última página disponível: `thankyou`. Nesta página, é possível ver apenas uma mensagem de agradecimento.
 
