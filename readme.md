@@ -99,9 +99,11 @@ Finalmente vamos poder começar a trabalhar! Mas antes vamos dar uma espiada no 
 
 Existem 3 rotas (routes) nesta versão super-simplificada do sistema. A primeira é a home (ou index), a própria página inicial. Quando você abrir o sistema no navegador, verá essa rota:
 
-<img src="http://imgur.com/AETjIIv" alt="Home Page">
+![Home Page](http://i.imgur.com/AETjIIv.png)
 
 A segunda rota é a mesma página `/`, mas ao invés de ter seu método como GET, ela possui o método POST. Isso significa que essa rota é a usada para receber os dados do formulário de cadastro. Você não conseguirá acessar essa rota pelo método POST pelo navegador a não ser que clique no botão "Cadastrar" no formulário. A viagem até ela é tão rápida que você nem verá a página, pois o cadastro te levará para a última página disponível: `thankyou`. Nesta página, é possível ver apenas uma mensagem de agradecimento.
+
+![Agradecimento](http://i.imgur.com/JU9Oknk.png)
 
 Se você foi honesto(a) e digitou dados corretos no formulário antes de clicar em Cadastrar, um usuário foi criado no banco de dados que nós migramos, na tabela `betas`. Nesta tabela, você verá um número de identificação (id), um nome de usuário (username), o e-mail (email), um código especial (token), a data de cadastro (created_at) e a data de atualização (updated_at). Você pode criar quantos usuários beta quiser, pois todo o código será descartado. Caso você "suje" demais o banco, pode refazer a migração, começando do zero, usando o comando na pasta raíz do projeto
 
