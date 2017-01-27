@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'BetaController@getBetaForm');
+Route::post('/', 'BetaController@postBetaForm');
+
+Route::get('/thankyou', 'BetaController@showThankYou');
