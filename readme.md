@@ -10,7 +10,7 @@ As instruções de instalação estão simplificadas.
 
 Para iniciar é preciso instalar o Apache (ou Negix), PHP, MySQL e o [Composer](https://getcomposer.org), além do Git/GitHub. Instruções para instalar as ferramentas não estão inclusas aqui.
 
-Opcionalmente, será preciso instalar o [NodeJS](https://) para utilizar o NPM, Sass e outras ferramentas de desenvolvimento avançadas.
+Opcionalmente, será preciso instalar o [NodeJS](https://nodejs.org) para utilizar o NPM, Sass e outras ferramentas de desenvolvimento avançadas.
 
 ## Baixando e utilizando o repositório
 
@@ -64,9 +64,11 @@ Para manter seu código atualizado com as últimas mudanças que os outros colob
 
 O Git checará o repositório para ver se há algo novo, e fará download dos arquivos. 
 
-É possível substituir toda a complexidade do Git pelo programa do GitHub, que fará a maior parte do trabalho de forma visual e simplificada. O link está [aqui](https://) e é possível encontrar tutoriais para trabalhar tanto com o Git como com o GitHub no YouTube e no Google.
+É possível substituir toda a complexidade do Git pelo programa do GitHub, que fará a maior parte do trabalho de forma visual e simplificada. O link está [aqui](https://desktop.github.com) e é possível encontrar tutoriais para trabalhar tanto com o Git como com o GitHub no YouTube e no Google.
 
 ### Configurando a plataforma
+
+O sistema da SKND é construído em cima do framework [Laravel](http://laravel.com). Não entrarei em detalhes em como o Laravel funciona ou como usar seus muitos recursos de Back e Front-End. Dúvidas sobre o sistema em si podem ser encontradas na [documentação oficial](https://laravel.com/docs) e no canal de vídeo-tutoriais [Laracast](https://laracasts.com).
 
 Antes de poder usar o software, mesmo que seja só para ver as Views, é preciso fazer alguns comandos simples. Em primeiro lugar, você deve encontrar na raíz do projeto um arquivo chamado `.env.example`. Se você está usando Linux ou MacOS este arquivo estará oculto. Renomeie o arquivo para `.env`, tomando cuidado para que não seja digitado nada antes do ponto.
 
@@ -78,7 +80,7 @@ Dentro da pasta do projeto, execute o comando:
 
 Ao completar o comando, seu arquivo `.env` terá uma sequência de caracteres na linha `APP_KEY`.
 
-Na seção `DB_` é preciso preencher a configuração do MySQL para poder usar o banco de dados. Colaboradores que preferem usar outros bancos de dados só precisam seguir as instruções [desta página](https://). É muito simples de usar outros bancos com o Laravel, ainda que o projeto final use MySQL (MariaDB).
+Na seção `DB_` é preciso preencher a configuração do MySQL para poder usar o banco de dados. Colaboradores que preferem usar outros bancos de dados só precisam seguir as instruções [desta página](https://laravel.com/docs/5.3/database). É muito simples de usar outros bancos com o Laravel, ainda que o projeto final use MySQL (MariaDB).
 
 Preenchido o campo, é necessário agora "migrar" o banco de dados, que criará as tabelas que usaremos. Ainda no terminal, na pasta raíz, dê o comando:
 
@@ -105,7 +107,7 @@ A segunda rota é a mesma página `/`, mas ao invés de ter seu método como GET
 
 ![Agradecimento](http://i.imgur.com/JU9Oknk.png)
 
-Se você foi honesto(a) e digitou dados corretos no formulário antes de clicar em Cadastrar, um usuário foi criado no banco de dados que nós migramos, na tabela `betas`. Nesta tabela, você verá um número de identificação (id), um nome de usuário (username), o e-mail (email), um código especial (token), a data de cadastro (created_at) e a data de atualização (updated_at). Você pode criar quantos usuários beta quiser, pois todo o código será descartado. Caso você "suje" demais o banco, pode refazer a migração, começando do zero, usando o comando na pasta raíz do projeto
+Se você foi honesto(a) e digitou dados corretos no formulário antes de clicar em Cadastrar, um usuário foi criado no banco de dados que nós migramos, na tabela `betas`. Nesta tabela, você verá um número de identificação (id), um nome de usuário (username), o e-mail (email), um código especial (token), a data de cadastro (created_at) e a data de atualização (updated_at). Você pode criar quantos usuários beta quiser, pois todo o código será descartado. Caso você "suje" demais o banco, pode refazer a migração, começando do zero, usando o comando na pasta raíz do projeto:
 
     $ php artisan migrate:refresh
 
@@ -153,7 +155,7 @@ A View `thankyou` só possui uma mensagem de agradecimento.
 
 Dois arquivos são gerados para uso do aplicativo, app.css e app.js. Ambos estão dentro da pasta `public`, em suas respectivas pastas. Estilos e script personalizados devem habitar a pasta `public` e serem divididos em suas próprias pastas. Se for necessário colocar fontes, crie uma pasta `fonts` e insira os arquivos dentro dela. Também é possível e necessário substituir o arquivo `favicon.ico` por um Favicon adequado.
 
-O Laravel já está apto para usar SASS e LESS (entre outros pré-processadores), assim como usar o Gulp e WebPack. Não vou colocar em detalhes como usar essas tecnologias. Para fazer uso, instale o `npm` e puxe as dependências com o comando `npm install`. Uma página do manual [está inclusa](http://) aqui para configurar o sistema para usar o SASS, LESS ou o que quer que seja.
+O Laravel já está apto para usar SASS e LESS (entre outros pré-processadores), assim como usar o Gulp e WebPack. Não vou colocar em detalhes como usar essas tecnologias. Para fazer uso, instale o `npm` e puxe as dependências com o comando `npm install`. Uma página do manual [está inclusa](https://laravel.com/docs/5.3/elixir) aqui para configurar o sistema para usar o SASS, LESS ou o que quer que seja.
 
 ### Finalmentes
 
@@ -164,5 +166,3 @@ Principalmente, é preciso lembrar que esta é a versão ALPHA do projeto, e tud
 Bom trabalho a todos e qualquer dúvida sabem onde me encontrar! :D
 
 -- Andre
-
-
